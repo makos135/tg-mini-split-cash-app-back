@@ -7,13 +7,13 @@ class Init extends Phinx\Migration\AbstractMigration
     public function change()
     {
         $this->execute("ALTER DATABASE CHARACTER SET 'utf8mb4';");
-        $this->execute("ALTER DATABASE COLLATE='utf8mb4_0900_ai_ci';");
+        $this->execute("ALTER DATABASE COLLATE='utf8mb4_unicode_ci';");
         $this->table('rooms', [
                 'id' => false,
                 'primary_key' => ['id'],
                 'engine' => 'InnoDB',
                 'encoding' => 'utf8mb4',
-                'collation' => 'utf8mb4_0900_ai_ci',
+                'collation' => 'utf8mb4_unicode_ci',
                 'comment' => '',
                 'row_format' => 'DYNAMIC',
             ])
@@ -25,14 +25,14 @@ class Init extends Phinx\Migration\AbstractMigration
             ->addColumn('name', 'string', [
                 'null' => false,
                 'limit' => 255,
-                'collation' => 'utf8mb4_0900_ai_ci',
+                'collation' => 'utf8mb4_unicode_ci',
                 'encoding' => 'utf8mb4',
                 'after' => 'id',
             ])
             ->addColumn('description', 'text', [
                 'null' => true,
                 'limit' => 65535,
-                'collation' => 'utf8mb4_0900_ai_ci',
+                'collation' => 'utf8mb4_unicode_ci',
                 'encoding' => 'utf8mb4',
                 'after' => 'name',
             ])
@@ -47,7 +47,7 @@ class Init extends Phinx\Migration\AbstractMigration
                 'primary_key' => ['id'],
                 'engine' => 'InnoDB',
                 'encoding' => 'utf8mb4',
-                'collation' => 'utf8mb4_0900_ai_ci',
+                'collation' => 'utf8mb4_unicode_ci',
                 'comment' => '',
                 'row_format' => 'DYNAMIC',
             ])
@@ -85,7 +85,7 @@ class Init extends Phinx\Migration\AbstractMigration
                 'primary_key' => ['id'],
                 'engine' => 'InnoDB',
                 'encoding' => 'utf8mb4',
-                'collation' => 'utf8mb4_0900_ai_ci',
+                'collation' => 'utf8mb4_unicode_ci',
                 'comment' => '',
                 'row_format' => 'DYNAMIC',
             ])
@@ -118,7 +118,7 @@ class Init extends Phinx\Migration\AbstractMigration
             ->addColumn('currency', 'string', [
                 'null' => true,
                 'limit' => 5,
-                'collation' => 'utf8mb4_0900_ai_ci',
+                'collation' => 'utf8mb4_unicode_ci',
                 'encoding' => 'utf8mb4',
                 'after' => 'value',
             ])
@@ -145,7 +145,7 @@ class Init extends Phinx\Migration\AbstractMigration
                 'primary_key' => ['id'],
                 'engine' => 'InnoDB',
                 'encoding' => 'utf8mb4',
-                'collation' => 'utf8mb4_0900_ai_ci',
+                'collation' => 'utf8mb4_unicode_ci',
                 'comment' => '',
                 'row_format' => 'DYNAMIC',
             ])
@@ -157,14 +157,14 @@ class Init extends Phinx\Migration\AbstractMigration
             ->addColumn('telegram_id', 'string', [
                 'null' => false,
                 'limit' => 1024,
-                'collation' => 'utf8mb4_0900_ai_ci',
+                'collation' => 'utf8mb4_unicode_ci',
                 'encoding' => 'utf8mb4',
                 'after' => 'id',
             ])
             ->addColumn('name', 'string', [
                 'null' => true,
                 'limit' => 255,
-                'collation' => 'utf8mb4_0900_ai_ci',
+                'collation' => 'utf8mb4_unicode_ci',
                 'encoding' => 'utf8mb4',
                 'after' => 'telegram_id',
             ])

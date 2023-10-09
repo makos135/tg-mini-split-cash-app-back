@@ -11,14 +11,14 @@ class SmallChanges extends Phinx\Migration\AbstractMigration
                 'primary_key' => ['id'],
                 'engine' => 'InnoDB',
                 'encoding' => 'utf8mb4',
-                'collation' => 'utf8mb4_0900_ai_ci',
+                'collation' => 'utf8mb4_unicode_ci',
                 'comment' => '',
                 'row_format' => 'DYNAMIC',
             ])
             ->addColumn('currency', 'string', [
                 'null' => true,
                 'limit' => 5,
-                'collation' => 'utf8mb4_0900_ai_ci',
+                'collation' => 'utf8mb4_unicode_ci',
                 'encoding' => 'utf8mb4',
                 'after' => 'description',
             ])
@@ -33,21 +33,21 @@ class SmallChanges extends Phinx\Migration\AbstractMigration
                 'primary_key' => ['id'],
                 'engine' => 'InnoDB',
                 'encoding' => 'utf8mb4',
-                'collation' => 'utf8mb4_0900_ai_ci',
+                'collation' => 'utf8mb4_unicode_ci',
                 'comment' => '',
                 'row_format' => 'DYNAMIC',
             ])
             ->addColumn('description', 'text', [
                 'null' => true,
                 'limit' => 65535,
-                'collation' => 'utf8mb4_0900_ai_ci',
+                'collation' => 'utf8mb4_unicode_ci',
                 'encoding' => 'utf8mb4',
                 'after' => 'value',
             ])
             ->changeColumn('currency', 'string', [
                 'null' => true,
                 'limit' => 5,
-                'collation' => 'utf8mb4_0900_ai_ci',
+                'collation' => 'utf8mb4_unicode_ci',
                 'encoding' => 'utf8mb4',
                 'after' => 'description',
             ])
@@ -62,14 +62,14 @@ class SmallChanges extends Phinx\Migration\AbstractMigration
                 'primary_key' => ['id'],
                 'engine' => 'InnoDB',
                 'encoding' => 'utf8mb4',
-                'collation' => 'utf8mb4_0900_ai_ci',
+                'collation' => 'utf8mb4_unicode_ci',
                 'comment' => '',
                 'row_format' => 'DYNAMIC',
             ])
             ->addColumn('token', 'string', [
                 'null' => true,
                 'limit' => 512,
-                'collation' => 'utf8mb4_0900_ai_ci',
+                'collation' => 'utf8mb4_unicode_ci',
                 'encoding' => 'utf8mb4',
                 'after' => 'name',
             ])
